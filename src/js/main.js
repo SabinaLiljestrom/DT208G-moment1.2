@@ -9,6 +9,7 @@ function printCourseDetails(course) {
 }
 // Hämta DOM-element för formulär och kursdetaljer
 var courseForm = document.getElementById("courseForm");
+var courseCodes = [];
 // Lägg till händelselyssnare på formuläret
 courseForm.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -22,6 +23,13 @@ courseForm.addEventListener("submit", function (event) {
         alert("Progression måste vara mellan 1 och 2 tecken långt");
         return;
     }
+    // Kontrollera om kurskoden redan finns i den sparade arrayen
+    if (courseCodes.includes(codeInput.value)) {
+        alert("Kurskoden måste vara unik!");
+        return;
+    }
+    // Lägg till den nya kurskoden i arrayen
+    courseCodes.push(codeInput.value);
     // Skapa ett kursobjekt och spara det i localStorage
     var newCourse = {
         code: codeInput.value,

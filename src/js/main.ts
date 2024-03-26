@@ -23,7 +23,7 @@ interface CourseInfo {
 }
 // Hämta DOM-element för formulär och kursdetaljer
 const courseForm = document.getElementById("courseForm") as HTMLFormElement;
-   
+let courseCodes: string[] = [];
 // Lägg till händelselyssnare på formuläret
 courseForm.addEventListener("submit", (event) => {
 event.preventDefault();
@@ -39,7 +39,14 @@ const syllabusInput = document.getElementById("syllabus") as HTMLInputElement;
     alert("Progression måste vara mellan 1 och 2 tecken långt");
     return;
   }
-
+ 
+// Kontrollera om kurskoden redan finns i den sparade arrayen
+if (courseCodes.includes(codeInput.value)) {
+    alert("Kurskoden måste vara unik!");
+    return;
+}
+// Lägg till den nya kurskoden i arrayen
+courseCodes.push(codeInput.value);
  // Skapa ett kursobjekt och spara det i localStorage
  const newCourse: CourseInfo = {
     code: codeInput.value,
