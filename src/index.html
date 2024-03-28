@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Moment 1.2</title>
     <script src="js/main.js" type="module"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Moment 1.2</h1>
+    <p>Här kan du lägga in kurser och spara dom i en lista. För att ändra inmatad text klicka på texten du vill ändra så går textinmatningen att justera.</p>
+    <fieldset><!--ramar in formulär rubrik-->
     <form id="courseForm">
         <label for="code">Kurskod:</label><br>
         <input type="text" id="code" required>
@@ -19,9 +23,10 @@
         <input type="text" id="progression" required>
         <br>
         <label for="syllabus">Länk kursplan:</label><br>
-        <input type="text" id="syllabus" required>
-        <button type="submit" id="spara">Spara kursinformation</button>
-    </form>
+        <input type="text" id="syllabus" required><br>
+        <button type="submit" id="spara">Spara kursinformation</button><br>
+        <button type="reset" id="reset">Rensa formulär</button>
+    </form></fieldset>
     <span id="message"></span>
     <div id="courseDetails"></div>
 

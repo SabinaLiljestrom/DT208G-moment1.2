@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+        font-family: 'Roboto', sans-serif;
+}
+h1 {
+    font-family: 'Permanent Marker';
+    background-color: white;
+    font-size: 42px;
+    padding: 2%;
+}
+h2 {
+    font-family: 'Permanent Marker';
+    font-size: 36px;
+    background-color: white;
+}
+p {
+    font-size: 1.2em;
+    line-height: 1.4em;
+    background-color: white;
+    max-width: 400px;
+    padding: 2%;
+}
+body {
+    max-width: max-content;
+    margin: auto;
+    }
+#courseForm {
+    border-radius: 5px;
+    background-color: #c8c8c8;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+  }
+  #courseDetails {
+    margin: 20px;
+  }
+  
+fieldset {
+    /*--utseende linje runt formulär--*/
+    width: 50%;
+    margin: 20px;
+    border: 4px solid #F8762A;
+    padding: 1%;
+  }
+  
+  input[type=text],
+  select {
+      /*--utseende lista med val--*/
+    width: 50%;
+    min-width: 300px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color:  #f7f7f7;
+  }
+ 
+  
+  button[type=submit] {
+      /*--utseende skicka knapp--*/
+    width: 50%;
+    max-width: 200px;
+    background-color: #C0ECF2;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button[type=submit]:hover {
+      /*--utseende skicka knapp mus över--*/
+    background-color: #F8762A;
+  }
+  
+  button[type=reset] {
+      /*--utseende radera formulär knapp--*/
+    width: 50%;
+    max-width: 200px;
+    background-color: #C0ECF2;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: #F8762A;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button[type=reset]:hover {
+      /*--utseende mus över radera knapp--*/
+    background-color: #F8762A;
+  }
